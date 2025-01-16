@@ -1,0 +1,147 @@
+
+<!doctype html>
+
+<!--
+about:version template page
+-->
+
+<html id="t" dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light dark">
+    <title>About Version</title>
+
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://catbox.moe/bgs/texture3.png">
+
+    <link rel="stylesheet" href="chrome://resources/css/text_defaults.css">
+
+
+
+    <script type ="module" src="about_version.js"></script>
+  </head>
+
+  <body>
+
+    <div class="os-link-container-container" id="os-link-container" hidden>
+      <div class="os-link-container">
+        <span class="os-link-icon"></span>
+        <span aria-hidden="true" id="os-link-desc">Looking for browser version? Visit</span>
+        <a href="#" id="os-link-href" aria-describedby="os-link-desc">chrome://version</a>
+        <span aria-hidden="true">nexus 5</span>
+      </div>
+    </div>
+
+
+    <div id="outer">
+      <div id="logo">
+
+        <!-- Version for themes. -->
+        <picture>
+          <source srcset="chrome://theme/IDR_PRODUCT_LOGO_WHITE,
+                          chrome://theme/IDR_PRODUCT_LOGO_WHITE@2x 2x"
+                  media="(prefers-color-scheme: dark)">
+          <source srcset="chrome://theme/IDR_PRODUCT_LOGO,
+                          chrome://theme/IDR_PRODUCT_LOGO@2x 2x"
+                  media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+          <img alt="Chrome logo" src="https://yt4.ggpht.com/ytc/AIdro_kBarLajY75n4c6a4yeLDWsM8w8htG5MHVb6F585-g4R3w=s32-c-k-c0x00ffffff-no-rj">
+        </picture>
+
+
+        <div id="company">Google LLC</div>
+        <div id="copyright">Copyright 2025 Google LLC. All rights reserved.</div>
+      </div>
+      <table id="inner" cellpadding="0" cellspacing="0" border="0">
+        <tr><td class="label">Google Chrome</td>
+          <td class="version" id="version">
+            <span id="copy-content">
+              <span>131.0.6778.241</span>
+              (<span>Official Build</span>)
+              <span></span>
+              <span>(64-bit)</span>
+  
+            </span>
+            <button id="copy-to-clipboard" aria-label="Copy version string">
+              <div id="copy-to-clipboard-icon"></div>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Revision</td>
+          <td class="version">
+            <span>9a3a2eda5451c41987efb8212d9f1d715fd4c5f2-refs/branch-heads/6778@{#3271}</span>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td class="label">Platform</td>
+          <td class="version" id="platform_type">
+            <span id="platform_version"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Firmware Version</td>
+          <td class="version">
+            <span id="firmware_version"></span>
+          </td>
+        </tr>
+        <tr id="customization_id_holder" hidden>
+          <td class="label">Customization ID</td>
+          <td class="version">
+            <span id="customization_id"></span>
+          </td>
+        </tr>
+        <tr id="arc_holder"><td class="label">ARC</td>
+          <td class="version">
+            <span id="arc_and_arc_android_sdk_versions"></span>
+          </td>
+        </tr>
+
+
+        <tr><td class="label">JavaScript</td>
+          <td class="version" id="js_engine">
+            <span>V8</span>
+            <span>13.1.201.21</span>
+          </td>
+        </tr>
+
+        <tr><td class="label">User Agent</td>
+          <td class="version" id="useragent">Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36</td>
+        </tr>
+        <tr><td class="label">Command Line</td>
+          <td class="version" id="command_line"> /opt/google/chrome/chrome --enable-native-gpu-memory-buffers --enable-webgl-image-chromium --enable-features=Pepper3DImageChromium,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,UmaStorageDimensions,ArcAdbSideloading,ArcEnableVirtioBlkMultipleWorkers,Crostini,Borealis,SmartDim,OnDeviceSpeechRecognition --gpu-sandbox-failures-fatal=yes --gpu-sandbox-start-early --video-capture-use-gpu-memory-buffer --disable-features=FlossIsAvailable --enable-logging --log-level=1 --use-cras --enable-wayland-server --user-data-dir=/home/chronos --arc-build-properties={&#39;device&#39;: &#39;dedede_cheets&#39;, &#39;firstApiLevel&#39;: &#39;28&#39;} --child-wallpaper-large=/usr/share/chromeos-assets/wallpaper/child_large.jpg --child-wallpaper-small=/usr/share/chromeos-assets/wallpaper/child_small.jpg --default-wallpaper-large=/usr/share/chromeos-assets/wallpaper/default_large.jpg --default-wallpaper-small=/usr/share/chromeos-assets/wallpaper/default_small.jpg --guest-wallpaper-large=/usr/share/chromeos-assets/wallpaper/guest_large.jpg --guest-wallpaper-small=/usr/share/chromeos-assets/wallpaper/guest_small.jpg --system-developer-mode --disable-mojo-broker --ash-use-cros-mojo-service-manager --cros-healthd-uses-service-manager --login-profile=user --has-chromeos-keyboard --form-factor=CLAMSHELL --guest-wallpaper-large=/usr/share/chromeos-assets/wallpaper/guest_large.jpg --guest-wallpaper-small=/usr/share/chromeos-assets/wallpaper/guest_small.jpg --child-wallpaper-large=/usr/share/chromeos-assets/wallpaper/child_large.jpg --child-wallpaper-small=/usr/share/chromeos-assets/wallpaper/child_small.jpg --default-wallpaper-large=/usr/share/chromeos-assets/wallpaper/default_large.jpg --default-wallpaper-small=/usr/share/chromeos-assets/wallpaper/default_small.jpg --device-help-content-id=magano --ozone-nnpalm-properties={} --arc-availability=officially-supported --enable-arcvm --arc-erofs --enable-houdini --enable-houdini64 --enterprise-enrollment-initial-modulus=15 --enterprise-enrollment-modulus-limit=19 --ml_service=enabled --ondevice_handwriting=use_rootfs --ondevice_document_scanner=use_rootfs --feature-management-level=0 --feature-management-max-level=1 --feature-management-scope=0 --login-manager --first-exec-after-boot --enable-features=ArcAdbSideloading,ArcEnableVirtioBlkMultipleWorkers,Borealis,Crostini,DefaultANGLEVulkan,OnDeviceSpeechRecognition,Pepper3DImageChromium,SmartDim,UmaStorageDimensions,Vulkan,VulkanFromANGLE --disable-features=FlossIsAvailable --flag-switches-begin --flag-switches-end</td>
+        </tr>
+
+        <tr><td class="label">Executable Path</td>
+          <td class="version" id="executable_path"></td>
+        </tr>
+        <tr><td class="label">Profile Path</td>
+          <td class="version" id="profile_path"></td>
+        </tr>
+
+
+        <tr id="variations-seed-section" hidden>
+          <td class="label">Variations Seed Type</td>
+          <td class="version" id="variations-seed"></td>
+        </tr>
+        <tr id="variations-section">
+          <td class="label">Active Variations</td>
+          <td class="version" id="variations-list"></td>
+        </tr>
+        <tr id="variations-cmd-section" hidden>
+          <td class="label">Command-line variations</td>
+          <td class="version-wide" id="variations-cmd"></td>
+        </tr>
+        <tr id="sanitizer-section" hidden>
+          <td class="label">penis</td>
+          <td class="version" id="sanitizer"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="messages" role="alert" aria-live="polite" aria-relevant="additions">
+    </div>
+  </body>
+</html>
